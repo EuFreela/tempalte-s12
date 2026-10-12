@@ -124,6 +124,15 @@ seguir para o próximo passo.
 
 Para parar o servidor, pressione `Ctrl + C` no terminal.
 
+### Atalhos do Windows (`.bat`)
+
+> Basta dar **dois cliques**, sem abrir terminal.
+
+| Arquivo | O que faz |
+| --- | --- |
+| `START.bat` | Verifica se já está rodando, inicia o servidor em segundo plano e abre o navegador em `http://127.0.0.1:3000` |
+| `STOP.bat` | Localiza o processo na porta 3000 e o encerra |
+
 ### Scripts disponíveis
 
 | Comando | Descrição |
@@ -170,10 +179,12 @@ $env:PORT=8080; npm start
 
 ```
 template-maps/
-├── package.json          # Metadados e scripts (start/dev)
-├── server.js             # Servidor HTTP nativo do Node (sem dependências)
-├── template.md           # Blueprint/especificação técnica original
-├── README.md             # Este arquivo
+├── START.bat            # Atalho Windows: inicia o servidor e abre o navegador
+├── STOP.bat             # Atalho Windows: encerra o servidor (porta 3000)
+├── package.json         # Metadados e scripts (start/dev)
+├── server.js            # Servidor HTTP nativo do Node (sem dependências)
+├── template.md          # Blueprint/especificação técnica original
+├── README.md            # Este arquivo
 └── public/
     ├── index.html        # Estrutura da página (cabeçalho, toolbar, cartão)
     ├── styles.css        # UI da página + CARD_CSS do cartão (medidas em cqw)
